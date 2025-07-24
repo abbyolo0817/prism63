@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,6 +77,33 @@
             justify-content: flex-end;
             gap: 10px;
             margin-top: 5px; /* 可依需求調整上下間距 */
+        }
+        @media (max-width: 500px) {
+            .blue-row {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                box-sizing: border-box;
+                gap: 4px;
+            }
+            .blue-button {
+                width: 68px;           /* 固定寬度，建議68~70px */
+                min-width: 0;
+                max-width: 68px;       /* 跟width一樣，防止被拉大 */
+                margin: 0;
+                font-size: 15px;
+                padding: 8px 0;
+                box-sizing: border-box;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .blue-button {
+            min-width: 80px; /* 桌機也有最小寬度 */
         }
     </style>
 
